@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8"/>
     <title>Admin Panel</title>	
-    [if lt IE 9]>
-    <!--<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />-->
-    <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
-    <![endif]
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <script src="<?php echo base_url('js/jquery-1.5.2.min.js'); ?>" type="text/javascript"></script>
     <script src="<?php echo base_url('js/hideshow.js'); ?>" type="text/javascript"></script>
     <script src="<?php echo base_url('js/jquery.tablesorter.min.js'); ?>" type="text/javascript"></script>
@@ -43,58 +43,30 @@
         $('.column').equalHeight();
     });
 </script>
-<style>
-#myDIV {
-    background-color: lightblue;
-  border-bottom: 2px dotted;
-    -webkit-animation: mymove 2s infinite; /* Chrome, Safari, Opera */
-    animation: mymove 2s infinite;
-    font-size: 150%;
-    padding-right: .6em;
-margin: 1em 0;
- font-family: "Comic Sans MS", Times, serif;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes mymove {
-    30% {padding: 10px;}
-}
-
-/* Standard syntax */
-@keyframes mymove {
-    30% {padding: 10px;}
-}
-</style>
 </head>
 <body>
 <header id="header">
     <hgroup>
-        <h1 class="site_title"><a href="index.html">  <img src="<?php echo base_url('images/human.png'); ?>" alt=""/>Online School</a></h1>
-        
-        <!--<h2 class="section_title">Dashboard</h2><div class="btn_view_site"><a href="">View Site</a></div>-->
+        <h1 class="site_title"><a href="">Test</a></h1>
+        <h2 class="section_title">Dashboard</h2>
     </hgroup>
 </header> <!-- end of header bar -->
 <section id="secondary_bar">
     <div class="user">
-        <p>Admin</p>
-         <a class="logout_user" href="<?php echo base_url()."index.php/login_ctrl/logout"; ?>" title="Logout">Logout</a> 
+        <p>User</p>
+         <a class="logout_user" href="<?php echo base_url()."index.php/user_ctrl/logout"; ?>" title="Logout">Logout</a> 
     </div>
-<!--<div class="breadcrumbs_container">
+<div class="breadcrumbs_container">
     <article class="breadcrumbs"><a href="dashboard.php" class="current">Dashboard</a> 
          <div class="breadcrumb_divider"></div> <a href="change_password.php" class="current" >Change Password</a>
     </article>
-</div>  -->
+</div>  
 </section><!-- end of secondary bar -->
 <aside id="sidebar" class="column">
-<h3>Menu List</h3>
-<a href="../../student/success.php"></a>
-    <ul class="toggle">
-    <!--<li class="icn_new_article"><a href="<?php echo base_url()."index.php/student_ctrl/create"; ?>">Add New Student</a></li>-->
-    <li id="myDIV" style="background-color:#d4d4d4; padding: 5%; " class="icn_new_article"><a href="<?php echo base_url()."index.php/student_ctrl/home"; ?>" > Home</a></li>
-        <li id="myDIV" style="background-color:#d4d4d4; padding: 5%; "class="icn_new_article"><a href="<?php echo base_url()."index.php/student_ctrl/"; ?>">Student Record</a></li>
-    <li id="myDIV" style="background-color:#d4d4d4; padding: 5%; " class="icn_new_article"><a >Teachers Record</a></li>
-    <li id="myDIV" style="background-color:#d4d4d4; padding: 5%; " class="icn_new_article"><a>Our Services </a></li>
-    <li class="icn_new_article"><a href="<?php echo base_url()."index.php/question_ctrl/question_list"; ?>">Question List</a></li>
+<h3>Question</h3>
+<ul class="toggle">
+    <li class="icn_new_article"><a href="<?php echo base_url()."index.php/test_ctrl/starttest"; ?>">Start Test</a></li>
+    <li class="icn_new_article"><a href="<?php echo base_url()."index.php/test_ctrl/result/"; ?>">Result</a></li>
 </ul>
 <footer>
     <hr />

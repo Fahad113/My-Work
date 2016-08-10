@@ -37,8 +37,17 @@
 | in the URL cannot be matched to a valid route.
 |
 */
+//$route['index/(:any)'] = 'student/view';
+//$route['index'] = 'student';
+//$route['(:any)'] = 'pages/view/$1';
+$route['student/update'] = 'student_ctrl/update';
+$route['student/delete'] = 'student_ctrl/delete';
+$route['student/create'] = 'student_ctrl/create';
+$route['default_controller'] = 'login_ctrl';
+$route['students/(:any)'] = 'student_ctrl/view/$1';
+$route['student/(:any)'] = 'student_ctrl/view/$1';
 
-$route['default_controller'] = "login_ctrl";
+//$route['default_controller'] = "news";
 $route['404_override'] = '';
 
 
